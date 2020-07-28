@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
+  SetInitialDate();
   ShowCalendar();
+
 }, false);
+
+function SetInitialDate() {
+  document.getElementById("fromDate").value = "2020-07-01";
+  document.getElementById("toDate").value = "2020-07-31";
+}
 
 var start = "2020-07-21";
 var end = "2020-07-21";
