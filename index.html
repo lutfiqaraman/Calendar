@@ -18,22 +18,38 @@
 
     <hr>
 
-    <div class="row">
-      <div class="col-md-12">
-        <form>
+    <form>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="fromDate">Event Name:</label>
+            <input type="text" class="form-control" placeholder="Enter event" id="eventName">
+          </div>
+        </div>
+      </div>
+      
+      <div class="row"> 
+        <div class="col-md-6">
           <div class="form-group">
             <label for="fromDate">From:</label>
             <input type="date" class="form-control" placeholder="Enter from date" id="fromDate">
           </div>
+        </div>
+        
+        <div class="col-md-6">
           <div class="form-group">
             <label for="toDate">To:</label>
             <input type="date" class="form-control" id="toDate">
           </div>
-          <button type="button" class="btn btn-primary">Search</button>
-        </form>
+        </div>
+
       </div>
-    </div>
-      
+
+      <button type="button" class="btn btn-primary">Add Event</button>
+    
+    </form>
+    
     <hr>
 
     <div class="row">
@@ -41,6 +57,7 @@
           <div id='calendar'></div>
       </div>
     </div>
+    
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
