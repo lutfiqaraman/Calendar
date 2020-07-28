@@ -5,12 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function SetInitialDate() {
-  document.getElementById("fromDate").value = moment().startOf("month").format("YYYY-MM-DD");;
-  document.getElementById("toDate").value = moment().endOf("month").format("YYYY-MM-DD");;
+  var dateControl = document.querySelector('input[type="date"]');
+  dateControl.value = moment().format("L");
 }
-
-var start = "2020-07-21";
-var end = "2020-07-21";
 
 var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -18,9 +15,8 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
 
     events: function(info, successCallback, failureCallback ) {
-      
-      info.start = start;
-      info.end = end;
+      info.start = "2020-07-01";
+      info.end = "2020-07-01";
 
       var events = [];
 
