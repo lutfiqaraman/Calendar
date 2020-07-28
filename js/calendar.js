@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function SetInitialDate() {
-  document.getElementById("fromDate").value = "2020-07-01";
-  document.getElementById("toDate").value = "2020-07-31";
+  document.getElementById("fromDate").value = moment().startOf("month").format("YYYY-MM-DD");;
+  document.getElementById("toDate").value = moment().endOf("month").format("YYYY-MM-DD");;
 }
 
 var start = "2020-07-21";
