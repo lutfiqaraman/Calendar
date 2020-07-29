@@ -4,25 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function SetInitialDate() {
-  var dateControl = document.querySelector('input[type="date"]');
-  dateControl.value = moment().format("L");
+
 }
 
+var events = [];
 var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
 
     initialView: 'dayGridMonth',
 
     events: function(info, successCallback, failureCallback ) {
-    
-      var events = [];
-
-      events.push({
-        title: "Hello World",
-        start: "2020-07-01",
-        end: "2020-07-01"
-      });
-
       successCallback(events);
     },
 
@@ -31,3 +22,11 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 function ShowCalendar() {
   calendar.render();
 }
+
+$("#addEvent").on("click", function() {
+  events.push({
+    title: $("#eventName").val(),
+    start: $("#fromDate").val(),
+    end: $("#toDate").val()
+  });
+});
