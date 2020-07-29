@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   SetInitialDate();
   ShowCalendar();
-
 }, false);
 
 function SetInitialDate() {
@@ -15,16 +14,13 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
 
     events: function(info, successCallback, failureCallback ) {
-      info.start = "2020-07-01";
-      info.end = "2020-07-01";
-
+    
       var events = [];
 
       events.push({
-        description: 'here you go',
-        title: 'hello world',
-        start: info.start,
-        end: info.end
+        title: "Hello World",
+        start: "2020-07-01",
+        end: "2020-07-01"
       });
 
       successCallback(events);
@@ -35,5 +31,3 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 function ShowCalendar() {
   calendar.render();
 }
-
-
