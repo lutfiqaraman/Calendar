@@ -1,11 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-  SetInitialDate();
+$(document).ready(function() {
   ShowCalendar();
-}, false);
-
-function SetInitialDate() {
-
-}
+});
 
 var events = [];
 var calendarEl = document.getElementById('calendar');
