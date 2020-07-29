@@ -29,4 +29,6 @@ $("#addEvent").on("click", function() {
     start: $("#fromDate").val(),
     end: $("#toDate").val()
   });
+
+  calendar.refetchEvents();
 });
